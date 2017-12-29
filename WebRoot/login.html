@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>登陆</title>
+
+		<!--script 网上找的 不满意可以换-->
+		<script src="assets/library/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+
+		<style type="text/css">
+			body {
+				background-color: #W;
+				/*背景颜色设置*/
+			}
+			
+			body>.grid {
+				height: 100%;
+			}
+			
+			.image {
+				margin-top: -100px;
+			}
+			
+			.column {
+				max-width: 450px;
+			}
+		</style>
+		<script>
+			$(document)
+				.ready(function() {
+					$('.ui.form')
+						.form({
+							fields: {
+								email: {
+									identifier: 'email',
+									rules: [{
+											type: 'empty',
+											prompt: 'Please enter your e-mail'
+										},
+										{
+											type: 'email',
+											prompt: 'Please enter a valid e-mail'
+										}
+									]
+								},
+								password: {
+									identifier: 'password',
+									rules: [{
+											type: 'empty',
+											prompt: 'Please enter your password'
+										},
+										{
+											type: 'length[6]',
+											prompt: 'Your password must be at least 6 characters'
+										}
+									]
+								}
+							}
+						});
+				});
+		</script>
+   <script type="text/javascript" src="md5.js"></script>
+   <script type="text/javascript">
+   		function f(){
+			//hash = hex_md5("12324");
+  			var password=document.getElementById("password");
+  			password.value=hex_md5(password.value);
+  			//alert(password.value);
+		}
+		//var password=document.getElementById("password");
+		//function passwdText(){
+		//	password.value="默认为学号";
+		//}
+   </script>
+	</head>
+
+	<body>
+		<div id="footer" class="ui middle aligned center aligned grid">
+			<div class="column">
+				<h2 class="ui red image header">
+	    				<!--red改成你喜欢的颜色-->
+	      			<img src="img/logo.png" class="image">
+					<div class="content red">
+	        				欢迎登陆课代表系统
+					</div>
+				</h2>
+				<form class="ui large form" method="post" action="checkUser" name="login">
+					<div class="ui stacked segment">
+						<div class="field">
+							<div class="ui left icon input">
+								<i class="user icon"></i>
+								<input type="text" name="stunum" placeholder="学号">
+							</div>
+						</div>
+						<div class="field">
+							<div class="ui left icon input">
+								<i class="lock icon"></i>
+								<input type="password" name="password" id="password" placeholder="密码">
+							</div>
+						</div>
+						<input class="ui fluid large red submit button" type="submit"  onclick="f();" value="登陆" />
+						<!--red改成 你喜欢的颜色-->
+					</div>
+
+					<div class="ui error message"></div>
+				</form>
+
+				<!-- <div class="ui message">
+					新用户?
+					<a href="#">注册</a>
+					
+				</div> -->
+			</div>
+		</div>
+				<div class="ui vertical very padded segment">
+			<div class="ui grid">
+				<div class="four wide column">
+					<div class="ui vertical text menu">
+						<div class="item">
+							<h3 class="ui header">Company</h3>
+						</div>
+
+						<div class="item">
+							Address : CN
+						</div>
+
+						<div class="item">
+							Tel : 010-66666
+						</div>
+					</div>
+				</div>
+
+				<div class="four wide column">
+					<div class="ui vertical  text menu">
+						<div class="item">
+							<h3 class="ui header">Company</h3>
+						</div>
+
+						<div class="item">
+							Address : CN
+						</div>
+
+						<div class="item">
+							Tel : 010-66666
+						</div>
+					</div>
+				</div>
+
+				<div class="four wide column">
+					<div class="ui vertical text menu">
+						<div class="item">
+							<h3 class="ui header">Company</h3>
+						</div>
+
+						<div class="item">
+							Address : CN
+						</div>
+
+						<div class="item">
+							Tel : 010-66666
+						</div>
+					</div>
+				</div>
+
+				<div class="four wide column">
+					<div class="ui vertical text menu">
+						<div class="item">
+							<h3 class="ui header">Company</h3>
+						</div>
+
+						<div class="item">
+							Address : CN
+						</div>
+
+						<div class="item">
+							Tel : 010-66666
+						</div>
+					</div>
+				</div>
+				<div>
+					<p></p>
+					<h4 class="ui horizontal divider">备案信息：XXXXX️</h4>
+				</div>
+			</div>
+	</body>
+
+</html>

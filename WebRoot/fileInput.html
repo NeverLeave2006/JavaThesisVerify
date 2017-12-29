@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>文件上传 </title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body>
+		<!-- Container -->
+		<div id="container">
+			<div class="ui inverted segment grid">
+				<!-- Header -->
+				<div id="header" class="four wide column">
+					<div id="branding">
+						<h1 id="site-name" class="ui inverted header">XXXX平台</h1>
+					</div>
+				</div>
+				<div class="four wide column"></div>
+				<div class="four wide column"></div>
+				<div id="user-tools" class="four wide column">
+					<div class="ui inverted header">
+						<h3>
+						欢迎您,
+					<!--请调用函数显示其身份-->
+					<strong>xx同学</strong>.
+					<p>
+					<a href="#">显示信息</a> /
+					<a href="#">更改密码</a> /
+					<a href="#">退出</a>
+					</p>
+					</h3>
+
+					</div>
+
+				</div>
+				<!-- END Header -->
+			</div>
+
+			<div class="ui grid">
+				<div class="four wide column ">
+					<div class="ui steps">
+						<a class="link step" href="#">主页</a>
+						<a class="link step" href="#">xxx专业</a>
+						<!--需要函数关联-->
+						<a class="link step" href="#">当前位置</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<!-- Content -->
+			<div id="content" class="ui middle aligned center aligned header">
+				<div id="content-main">
+					<div class="module" id="changelist">
+						<div id="toolbar">
+							<form action="UploadFile.ashx" method="post" enctype="multipart/form-data">
+
+								<div class="ui input focus">
+									<!-- DIV needed for valid HTML -->
+
+									<input type="file" id="file" multiple>
+									<!--<script>
+										function showFileName() {
+											var file; //创建file对象
+											for(var i; i < document.getElementById("file").files.length; i++) {
+												file = document.getElementById('file').files[i]; //.files
+												console.log(file.name);
+											}
+										}
+									</script>-->
+									<!--逻辑需要编写-->
+
+									<input type="button" class="ui red button" value="&nbsp;上&nbsp;&nbsp;传&nbsp;">
+								</div>
+							</form>
+						</div>
+
+
+						<h4 class="ui horizontal divider header">
+			 				<i class="file icon"></i>
+							您的文件
+						</h4>
+
+						<form id="changelist-form" class="ui message" method="post" novalidate=""><input type="hidden" name="search" value="null">
+							<br>
+							<br>
+							<p></p>
+							<p class="page">aaaa.txt
+								<!--插入js逻辑-->
+							</p>
+
+						</form>
+					</div>
+				</div>
+
+				<br class="clear">
+			</div>
+			<!-- END Content -->
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div id="footer">
+				<div class="ui vertical very padded segment">
+					<div class="ui grid">
+						<div class="four wide column">
+							<div class="ui vertical text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+
+						<div class="four wide column">
+							<div class="ui vertical  text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+
+						<div class="four wide column">
+							<div class="ui vertical text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+
+						<div class="four wide column">
+							<div class="ui vertical text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+						<div>
+							<p></p>
+							<h4 class="ui horizontal divider">备案信息：XXXXX️</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Container -->
+
+	</body>
+
+</html>

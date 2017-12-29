@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>后台管理系统</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body>
+		<!-- Container -->
+		<div id="container">
+			<div class="ui inverted segment grid">
+				<!-- Header -->
+				<div id="header" class="four wide column">
+					<div id="branding">
+						<h1 id="site-name" class="ui inverted header">XXXX平台</h1>
+					</div>
+				</div>
+				<div class="four wide column"></div>
+				<div class="four wide column"></div>
+				<div id="user-tools" class="four wide column">
+					<div class="ui inverted header">
+						<h3>
+						欢迎您,
+					<!--请调用函数显示其身份-->
+					<strong>管理用户1</strong>.
+					<p>
+					<a href="#">显示信息</a> /
+					<a href="#">更改密码</a> /
+					<a href="#">退出</a>
+					</p>
+					</h3>
+
+					</div>
+
+				</div>
+				<!-- END Header -->
+			</div>
+
+			<div class="ui grid">
+				<div class="four wide column ">
+					<div class="ui steps">
+						<a class="link step" href="#">主页</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<!-- Content -->
+			<div id="content" class="ui grid">
+				<div class="one wide column"></div>
+				<div class="eleven wide column">
+					<div class="header"><h2>论文提交情况</h2></div>
+					<br>
+					<div id="content-main">
+
+						<div class="module filtered" id="changelist">
+
+							<form id="changelist-form" method="post" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='' />
+
+								<div class="actions">
+									<label>Action: <select name="action" required>
+  <option value="" selected>---------</option>
+
+  <option value="delete_selected">Delete selected articles</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across" />
+									<button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+
+									<span class="action-counter" data-actions-icnt="7">0 of 7 selected</span>
+
+								</div>
+
+								<div class="results">
+									<table id="result_list">
+										<thead>
+											<tr>
+
+												<th scope="col" class="action-checkbox-column">
+
+													<div class="text"><span><input type="checkbox" id="action-toggle" /></span></div>
+													<div class="clear"></div>
+												</th>
+												<th scope="col" class="sortable column-title">
+
+													<div class="text">
+														<a href="?o=1">论文标题</a>
+													</div>
+													<div class="clear"></div>
+												</th>
+												<th scope="col" class="sortable column-content">
+
+													<div class="text">
+														<a href="?o=2">学号</a>
+													</div>
+													<div class="clear"></div>
+												</th>
+												<th scope="col" class="sortable column-pub_time">
+
+													<div class="text">
+														<a href="?o=3">提交日期</a>
+													</div>
+													<div class="clear"></div>
+												</th>
+												<th scope="col" class="sortable column-pub_time">
+
+													<div class="text">
+														<a href="?o=3">是否批阅</a>
+													</div>
+													<div class="clear"></div>
+												</th>
+												<th scope="col" class="sortable column-pub_time">
+
+													<div class="text">
+														<a href="?o=3">文件上传</a>
+													</div>
+													<div class="clear"></div>
+												</th>
+												<th scope="col" class="sortable column-pub_time">
+
+													<div class="text">
+														<a href="?o=3">文件下载</a>
+													</div>
+													<div class="clear"></div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											<tr class="row1">
+												<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="16" class="action-select" /></td>
+												<th class="field-title">
+													<a href="/admin/blog/article/16/change/">尽快回家可好</a>
+												</th>
+												<td class="field-content">看空间</td>
+												<td class="field-pub_time nowrap">-</td>
+											</tr>
+
+											<tr class="row2">
+												<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="15" class="action-select" /></td>
+												<th class="field-title">
+													<a href="/admin/blog/article/15/change/">看几点开始放假</a>
+												</th>
+												<td class="field-content">1111111111</td>
+												<td class="field-pub_time nowrap">-</td>
+											</tr>
+
+											<tr class="row1">
+												<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="14" class="action-select" /></td>
+												<th class="field-title">
+													<a href="/admin/blog/article/14/change/">dsfdf</a>
+												</th>
+												<td class="field-content" 1111111111</td>
+													<td class="field-pub_time nowrap">Dec. 2, 2017, 5:36 p.m.</td>
+											</tr>
+
+											<tr class="row2">
+												<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="13" class="action-select" /></td>
+												<th class="field-title">
+													<a href="/admin/blog/article/13/change/">TITLE</a>
+												</th>
+												<td class="field-content">1111111111</td>
+												<td class="field-pub_time nowrap">Dec. 2, 2017, 5:36 p.m.</td>
+											</tr>
+
+											<tr class="row1">
+												<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="12" class="action-select" /></td>
+												<th class="field-title">
+													<a href="/admin/blog/article/12/change/">TITLE</a>
+												</th>
+												<td class="field-content">1111111111</td>
+												<td class="field-pub_time nowrap">Dec. 2, 2017, 5:36 p.m.</td>
+											</tr>
+
+											<tr class="row2">
+												<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2" class="action-select" /></td>
+												<th class="field-title">
+													<a href="/admin/blog/article/2/change/">zy</a>
+												</th>
+												<td class="field-content">1111111111</td>
+												<td class="field-pub_time nowrap">Dec. 2, 2017, 5:36 p.m.</td>
+											</tr>
+
+											<tr class="row1">
+												<td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1" class="action-select" /></td>
+												<th class="field-title">
+													<a href="/admin/blog/article/1/change/">小书包</a>
+												</th>
+												<td class="field-content">11111111</td>
+												<td class="field-pub_time nowrap">Dec. 2, 2017, 5:36 p.m.</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+
+								<p class="paginator">
+
+									7 articles
+
+								</p>
+
+							</form>
+						</div>
+					</div>
+
+					<br class="clear" />
+				</div>
+				<div class="four wide column">
+					<h1>选择</h1>
+					<ul class="object-tools">
+
+						<li>
+							<a href="#" class="addlink">
+								添加学生
+							</a>
+						</li>
+						<li>
+							<a href="#" class="addlink">
+								添加学生论文
+							</a>
+						</li>
+
+					</ul>
+
+					<div id="changelist-filter">
+						<h2>日期</h2>
+
+						<h3> 修改日期 </h3>
+						<ul>
+
+							<li class="selected">
+								<a href="?" title="Any date">无限制</a>
+							</li>
+
+							<li>
+								<a href="#" title="Today">今天</a>
+							</li>
+
+							<li>
+								<a href="#" title="Past 7 days">上周</a>
+							</li>
+
+						</ul>
+
+					</div>
+				</div>
+				
+			</div>
+			<!-- END Content -->
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div id="footer">
+				<div class="ui vertical very padded segment">
+					<div class="ui grid">
+						<div class="four wide column">
+							<div class="ui vertical text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+
+						<div class="four wide column">
+							<div class="ui vertical  text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+
+						<div class="four wide column">
+							<div class="ui vertical text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+
+						<div class="four wide column">
+							<div class="ui vertical text menu">
+								<div class="item">
+									<h3 class="ui header">Company</h3>
+								</div>
+
+								<div class="item">
+									Address : CN
+								</div>
+
+								<div class="item">
+									Tel : 010-66666
+								</div>
+							</div>
+						</div>
+						<div>
+							<p></p>
+							<h4 class="ui horizontal divider">备案信息：XXXXX️</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Container -->
+
+	</body>
+
+</html>
